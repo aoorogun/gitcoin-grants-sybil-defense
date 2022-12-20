@@ -1,0 +1,20 @@
+project: {version: "1.0.0", seed: 14}
+paths:
+  contributions: data/simulated/contributions.csv
+  donors: data/simulated/donors.csv
+  features: data/simulated/donor_features.csv
+  benchmark: data/public/gr14_public_benchmark.json
+  artifacts: artifacts
+  reports: reports
+data: {donors: 6000, grants: 180, contributions: 48000, round_start: "2022-06-08", round_days: 15}
+features:
+  columns: [contribution_count, unique_grants, total_usd, mean_usd, amount_cv, top_grant_share, burst_share, night_share, wallet_age_days, prior_tx_count, trust_score, fingerprint_group_size]
+  target: is_sybil
+training:
+  candidates: [logistic_regression, random_forest, histogram_gradient_boosting]
+  test_start: "2022-06-18"
+  review_threshold: 0.55
+  block_threshold: 0.82
+allocation: {matching_pool_usd: 1000000, minimum_contribution_usd: 1.0}
+monitoring: {psi_warning: 0.10, psi_critical: 0.25}
+

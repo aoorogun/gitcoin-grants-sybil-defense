@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "selected_model": "logistic_regression",
+  "features": [
+    "contribution_count",
+    "unique_grants",
+    "total_usd",
+    "mean_usd",
+    "amount_cv",
+    "top_grant_share",
+    "burst_share",
+    "night_share",
+    "wallet_age_days",
+    "prior_tx_count",
+    "trust_score",
+    "fingerprint_group_size"
+  ],
+  "candidate_validation": {
+    "logistic_regression": {
+      "roc_auc": 0.7990943634133043,
+      "average_precision": 0.7496649470637455,
+      "brier_score": 0.08901630023533098,
+      "precision": 0.9627329192546584,
+      "recall": 0.60546875,
+      "false_positive_rate": 0.006543075245365322
+    },
+    "random_forest": {
+      "roc_auc": 0.8054287077426391,
+      "average_precision": 0.7464385484997086,
+      "brier_score": 0.08545371915187994,
+      "precision": 0.9748427672955975,
+      "recall": 0.60546875,
+      "false_positive_rate": 0.004362050163576881
+    },
+    "histogram_gradient_boosting": {
+      "roc_auc": 0.8070942952562704,
+      "average_precision": 0.727172219855454,
+      "brier_score": 0.08740313790754076,
+      "precision": 0.9627329192546584,
+      "recall": 0.60546875,
+      "false_positive_rate": 0.006543075245365322
+    }
+  },
+  "test_metrics": {
+    "roc_auc": 0.7191697191697192,
+    "average_precision": 0.46559116430164565,
+    "brier_score": 0.0655120798285133,
+    "precision": 0.7777777777777778,
+    "recall": 0.5384615384615384,
+    "false_positive_rate": 0.015873015873015872
+  },
+  "thresholds": {
+    "review": 0.55,
+    "block": 0.82
+  },
+  "action_rates": {
+    "allow": 0.935251798561151,
+    "block_pending_appeal": 0.03597122302158273,
+    "human_review": 0.02877697841726619
+  },
+  "train_rows": 5861,
+  "test_rows": 139,
+  "data_sha256": "675adc3ee229e15538adc19f3a033c4f66a3cdcb48dbf2af83954342e65447fa"
+}

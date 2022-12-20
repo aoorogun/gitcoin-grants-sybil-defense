@@ -1,0 +1,9 @@
+{
+  "scenario_id": "GR14-POLICY-STRICTER-REVIEW",
+  "name": "Lower review threshold and identity boost",
+  "review_threshold": 0.45,
+  "block_threshold": 0.72,
+  "exclude_blocked_from_matching": true,
+  "downweight_reviewed": 0.35
+}
+

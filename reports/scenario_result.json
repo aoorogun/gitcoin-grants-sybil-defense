@@ -1,0 +1,8 @@
+{
+  "scenario_id": "GR14-POLICY-STRICTER-REVIEW",
+  "reviewed_donors": 115,
+  "blocked_donors": 1591,
+  "grants_changed_over_1000_usd": 0,
+  "largest_absolute_reallocation_usd": 538.4904281734925,
+  "pool_reconciles": true
+}

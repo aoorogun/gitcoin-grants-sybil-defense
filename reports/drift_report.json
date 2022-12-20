@@ -1,0 +1,18 @@
+{
+  "status": "critical",
+  "maximum_psi": 1.1177012063019223,
+  "feature_psi": {
+    "contribution_count": 1.1177012063019223,
+    "unique_grants": 0.7393959621065473,
+    "total_usd": 0.3364102977678427,
+    "mean_usd": 0.15851549835892406,
+    "amount_cv": 0.1439997892423914,
+    "top_grant_share": 0.33542715470952555,
+    "burst_share": 0.0,
+    "night_share": 0.2962937144686888,
+    "wallet_age_days": 0.17394372987042642,
+    "prior_tx_count": 0.16336441993607334,
+    "trust_score": 0.15041806965462895,
+    "fingerprint_group_size": 0.17195895579942108
+  }
+}

@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Grants-integrity ML baseline
+Resources:
+  ArtifactBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption: {ServerSideEncryptionConfiguration: [{ServerSideEncryptionByDefault: {SSEAlgorithm: aws:kms}}]}
+      VersioningConfiguration: {Status: Enabled}
+      PublicAccessBlockConfiguration: {BlockPublicAcls: true, BlockPublicPolicy: true, IgnorePublicAcls: true, RestrictPublicBuckets: true}
+  ReconciliationAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties: {Namespace: GitcoinIntegrity, MetricName: AllocationReconciliationErrorUSD, Statistic: Maximum, Period: 3600, EvaluationPeriods: 1, Threshold: 0.01, ComparisonOperator: GreaterThanThreshold, TreatMissingData: breaching}
+Outputs:
+  Bucket: {Value: !Ref ArtifactBucket}
+
